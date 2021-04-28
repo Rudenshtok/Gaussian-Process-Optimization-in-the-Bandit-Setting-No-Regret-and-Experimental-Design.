@@ -1,0 +1,235 @@
+\def\Id{\operatorname{I}}
+\def\rset{\mathbb{R}}
+\def\nset{\mathbb{N}}
+\def\rme{\mathrm{e}}
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}}
+\def\eqsp{\,}
+\newcommandx{\norm}[2][2=]{\Vert#1 \Vert_{{#2}}}
+\newcommandx{\normop}[2][2=]{\Vert{#1}\Vert_{{#2}}}
+\newcommand{\GG}[4]{G_{#1,#2}^{#3,#4}}
+\newcommand{\BT}[4]{\Theta_{#1,#2}^{#3,#4}}
+\def\ProdB{\Gamma}
+\def\ProdBB{\widetilde \Gamma}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\beo}{\begin{array}{rl}}
+\newcommand{\eeo}{\end{array}}
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\dens}[2][1=\theta]{\operatorname{p}_{{#1}}(#2)}
+\newcommand{\priordens}[1]{\operatorname{p}_{0}(#1)}
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\mathsf{Var}}
+\DeclareMathOperator{\Pb}{\mathsf{P}}
+\DeclareMathOperator{\PE}{\mathbb{E}}
+\DeclareMathOperator{\tr}{\operatorname{Tr}}
+\DeclareMathOperator{\Tr}{\operatorname{Tr}}
+\def\grd{{\nabla}}
+\def\F{{\mathcal F}}
+\def\ttheta{{\tilde \theta}}
+\def\htheta{{\hat \theta}}
+\def\stheta{{\theta^{*}}}
+\def\tw{\tilde w}
+\def\hw{\widehat{w}}
+\def\oa{\overline{a}_{22}}
+\def\mr{\operatorname{M}^{\tr}}
+\def\mtw{\operatorname{M}^{\tw}}
+\def\mtwmart{\operatorname{M}^{\tw^{(0)}}}
+\def\mtwmark{\operatorname{M}^{\tw^{(1)}}}
+\def\mthmart{\operatorname{M}^{\ttheta^{(0)}}}
+\def\mthmark{\operatorname{M}^{\ttheta^{(1)}}}
+\def\mth{\operatorname{M}^{\ttheta}}
+\def\mthw{\operatorname{M}^{\ttheta, \tw}}
+\def\mwth{\operatorname{M}^{ \tw,\ttheta}}
+
+\def\topu{\tilde{\operatorname{U}}}
+\def\opu{\operatorname{U}}
+\def\nth{n^{\ttheta}}
+\def\mrth{m^{\tr\ttheta}}
+\def\mhr{\operatorname{M}^{\hw}}
+%noise constants for M^ th w
+%\def\mtwbsq{m^{\theta w \beta^2}}
+%\def\mtwgsq{m^{\theta w \gamma^2}}
+%\def\mtwbsqt{m^{\theta w \beta^2, \theta}}
+%\def\mtwbsqw{m^{\theta w \beta^2, w}}
+%\def\mtwgsqt{m^{\theta w \beta^2, \theta}}
+%\def\mtwgsqw{m^{\theta w \beta^2, w}}
+
+\newcommandx{\CPE}[3][1=]{\ensuremath{\mathbb{E}^{#3}_{#1}\left[#2\right]}}
+\newcommandx{\ps}[3][1=]{\ensuremath{\langle #2, #3 \rangle_{#1}}}
+\def\mw{m_W}
+\def\mwt{m_{W}^{\theta}}
+\def\mww{m_{W}^{w}}
+\def\mv{m_V}
+\def\mvt{m_{V}^{\theta}}
+\def\mvw{m_{V}^{w}}
+\def\ttmw{\tilde{m}_W}
+\def\ttmwt{\tilde{m}_{W}^{\theta}}
+\def\ttmww{\tilde{m}_{W}^{w}}
+\def\ttmv{\tilde{m}_V}
+\def\ttmvt{\tilde{m}_{V}^{\theta}}
+\def\ttmvw{\tilde{m}_{V}^{w}}
+\def\ttmVW{\tilde{m}_{VW}}
+\def\ttmVWt{\tilde{m}_{VW}^{\theta}}
+\def\ttmVWw{\tilde{m}_{VW}^{w}}
+\def\Linfty{\operatorname{L}_\infty}
+\def\Cinfty{\operatorname{C}_\infty}
+\def\CD{\operatorname{C}_D}
+\newcommand{\EConst}[1]{{\rm C}_{#1}^{\sf{exp}}}
+\def\EmVW{m_{VW}^{\sf{exp}}}
+\def\EtmVW{\widetilde m_{VW}^{\sf{exp}}}
+
+\def\trace{\operatorname{Tr}}
+\def\aonetwosum{a_{12}^{\sf s}}
+\def\aonetwoprod{a_{12}^{\sf p}}
+\def\Czero{\operatorname{C}_0}
+\def\Cone{\operatorname{C}_1}
+\def\Ctwo{\operatorname{C}_2}
+\def\Czerow{\operatorname{C}^{\tw}_0}
+\def\Conew{\operatorname{C}^{\tw}_1}
+\def\Ctwow{\operatorname{C}^{\tw}_2}
+\def\Czerot{\operatorname{C}^{\ttheta}_0}
+\def\Conet{\operatorname{C}^{\ttheta}_1}
+\def\Ctwot{\operatorname{C}^{\ttheta}_2}
+\def\Cthreet{\operatorname{C}^{\ttheta}_3}
+\def\Czerotw{\operatorname{C}^{\ttheta,\tw}_0}
+\def\Conetw{\operatorname{C}^{\ttheta,\tw}_1}
+\def\Ctwotw{\operatorname{C}^{\ttheta,\tw}_2}
+\newcommand{\CSeq}[3]{\operatorname{C}^{#1}_{#2,#3}}
+\newcommand{\CSEQ}[1]{\varrho^{#1}}
+%%%% esperance conditionnelle
+\newcommand{\tcr}[1]{\textcolor{red}{#1}}
+\def\Czerowh{\operatorname{C}^{\hw}_0}
+\def\Conewh{\operatorname{C}^{\hw}_1}
+\def\Ctwowh{\operatorname{C}^{\hw}_2}
+% state space 
+\def\Xset{\sf X}
+\def\Yset{\sf Y}
+\def\MK{\operatorname{P}}
+\def\rmd{{\rm d}}
+
+\def\dth{{d_{\theta}}}
+\def\dw{{d_w}}
+\def\pth{{p_\Delta}}
+\def\pw{{p_{22}}}
+\def\pwth{{p_{22,\Delta}}}
+
+\def\markovterm{\psi}
+\def\markovtermt{\widetilde{\psi}}
+\def\markovonetb{\widetilde{\psi}^{b_1}}
+\def\markovoneb{\psi^{b_1}}
+\def\markovtwotb{\widetilde{\psi}^{b_2}}
+\def\markovtwob{\psi^{b_2}}
+\def\Markovterm{\Psi}
+\def\markovoneA{\Psi^{A_{11}}}
+\def\markovoneB{\Psi^{A_{12}}}
+\def\markovtwoA{\Psi^{A_{21}}}
+\def\markovtwoB{\Psi^{A_{22}}}
+\def\martinterm{\xi}
+\def\martinoneb{\xi^{b_1}}
+\def\martintwob{\xi^{b_2}}
+\def\Martinterm{\Xi}
+\def\martinoneA{\Xi^{A_{11}}}
+\def\martinoneB{\Xi^{A_{12}}}
+\def\martintwoA{\Xi^{A_{21}}}
+\def\martintwoB{\Xi^{A_{22}}}
+
+\def\simplewtdiff{\Upsilon^{WV,\ttheta}}
+\def\simplewtA{\widetilde{\Psi}^{WV,\ttheta}}
+\def\simplewwdiff{\Upsilon^{WV,\tw}}
+\def\simplewwA{\widetilde{\Psi}^{WV,\tw}}
+\def\simplewtiter{\Phi^{WV,\ttheta}}
+\def\simplewwiter{\Phi^{WV,\tw}}
+
+\def\simplettdiff{\Upsilon^{V,\ttheta}}
+\def\simplettA{\widetilde{\Psi}^{V,\ttheta}}
+\def\simpletwdiff{\Upsilon^{V,\tw}}
+\def\simpletwA{\widetilde{\Psi}^{V,\tw}}
+\def\simplettiter{\Phi^{V,\ttheta}}
+\def\simpletwiter{\Phi^{V,\tw}}
+
+\def\simplewtiter{\Phi^{WV,\ttheta}}
+\def\simplewwiter{\Phi^{WV,\tw}}
+
+\def\twzero{{\tilde w}^{(0)}}
+\def\twone{{\tilde w}^{(1)}}
+
+\def\tthetazero{{\ttheta}^{(0)}}
+\def\tthetaone{{\ttheta}^{(1)}}
+
+\def\Czerowzero{\operatorname{C}^{\twzero}_0}
+\def\Conewzero{\operatorname{C}^{\twzero}_1}
+\def\Ctwowzero{\operatorname{C}^{\twzero}_2}
+
+\def\CL{\operatorname{C}_L}
+
+\def\boundwsim{\operatorname{E}^{WV}_0}
+\def\boundwtsim{\operatorname{E}^{WV,\ttheta}_0}
+\def\boundwt{\operatorname{E}^{WV,\ttheta}}
+\def\boundwwsim{\operatorname{E}^{WV,\tw}_0}
+\def\boundww{\operatorname{E}^{WV,\tw}}
+\def\boundw{\operatorname{E}^{WV}}
+
+\def\Czerowtilde{{\widetilde{\operatorname{C}}^{\tw}_0}}
+\def\Conewtilde{{\widetilde{\operatorname{C}}^{\tw}_1}}
+\def\Ctwowtilde{{\widetilde{\operatorname{C}}^{\tw}_2}}
+\def\Cthreewtilde{{\widetilde{\operatorname{C}}^{\tw}_3}}
+
+\def\Czerowtildep{{\widetilde{\operatorname{C}}^{\tw'}_0}}
+\def\Conewtildep{{\widetilde{\operatorname{C}}^{\tw'}_1}}
+\def\Ctwowtildep{{\widetilde{\operatorname{C}}^{\tw'}_2}}
+\def\Cthreewtildep{{\widetilde{\operatorname{C}}^{\tw'}_3}}
+
+\def\Czerowtildeh{{\widetilde{\operatorname{C}}^{\tw''}_0}}
+\def\Conewtildeh{{\widetilde{\operatorname{C}}^{\tw''}_1}}
+\def\Ctwowtildeh{{\widetilde{\operatorname{C}}^{\tw''}_2}}
+\def\Cthreewtildeh{{\widetilde{\operatorname{C}}^{\tw''}_3}}
+
+\def\Czerotwtilde{{\widetilde{\operatorname{C}}^{\ttheta,\tw}_0}}
+\def\Conetwtilde{{\widetilde{\operatorname{C}}^{\ttheta,\tw}_1}}
+\def\Ctwotwtilde{{\widetilde{\operatorname{C}}^{\ttheta,\tw}_2}}
+\def\Cthreetwtilde{{\widetilde{\operatorname{C}}^{\ttheta,\tw}_3}}
+
+\def\Czerottilde{{\widetilde{\operatorname{C}}^{\ttheta}_0}}
+\def\Conettilde{{\widetilde{\operatorname{C}}^{\ttheta}_1}}
+\def\Ctwottilde{{\widetilde{\operatorname{C}}^{\ttheta}_2}}
+\def\Cthreettilde{{\widetilde{\operatorname{C}}^{\ttheta}_3}}
+
+
+\def\boundtsim{\operatorname{E}^{V}_0}
+\def\boundttsim{\operatorname{E}^{V,\ttheta}_0}
+\def\boundtt{\operatorname{E}^{V,\ttheta}}
+\def\boundtwsim{\operatorname{E}^{V,\tw}_0}
+\def\boundtw{\operatorname{E}^{V,\tw}}
+
+\def\Boneinfty{{\operatorname{B}_{11,\infty}}}
+\def\Btwoinfty{{\operatorname{B}_{22,\infty}}}
+
+\def\ttmwzero{{\tilde{m}_W^{(0)}}}
+\def\ttmwtzero{\tilde{m}_{W}^{\theta,(0)}}
+\def\ttmwwzero{\tilde{m}_{W}^{w,(0)}}
+\def\ttmvzero{{\tilde{m}_V^{(0)}}}
+\def\ttmvtzero{\tilde{m}_{V}^{\theta,(0)}}
+\def\ttmvwzero{\tilde{m}_{V}^{w,(0)}}
+\def\ttmVWzero{{\tilde{m}_{VW}^{(0)}}}
+\def\ttmVWtzero{\tilde{m}_{VW}^{\theta,(0)}}
+\def\ttmVWwzero{\tilde{m}_{VW}^{w,(0)}}
+
+\def\ttmwi{{\tilde{m}_W^{(i)}}}
+\def\ttmwti{\tilde{m}_{W}^{\theta,(i)}}
+\def\ttmwwi{\tilde{m}_{W}^{w,(i)}}
+\def\ttmvi{{\tilde{m}_V^{(i)}}}
+\def\ttmvti{\tilde{m}_{V}^{\theta,(i)}}
+\def\ttmvwi{\tilde{m}_{V}^{w,(i)}}
+\def\ttmVWi{{\tilde{m}_{VW}^{(i)}}}
+\def\ttmVWti{\tilde{m}_{VW}^{\theta,(i)}}
+\def\ttmVWwi{\tilde{m}_{VW}^{w,(i)}}
+
+\def\ttmtcom{{\tilde{m}_{\Delta \ttheta}}}
+\def\ttmwcom{{\tilde{m}_{\Delta \tw}}}
+
+\def\tC{\widetilde{\operatorname{C}}}
+\def\hC{\widehat{\operatorname{C}}}
